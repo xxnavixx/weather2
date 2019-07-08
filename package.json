@@ -1,0 +1,30 @@
+{
+  "name": "0621weather",
+  "version": "1.0.0",
+  "description": "find weather from darksky net and use leaflet to display weather on map",
+  "main": "go.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxnavixx/weather2.git"
+  },
+  "keywords": [
+    "express",
+    "node-fetch",
+    "nedb"
+  ],
+  "author": "xxnavixx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxnavixx/weather2/issues"
+  },
+  "homepage": "https://github.com/xxnavixx/weather2#readme"
+}
