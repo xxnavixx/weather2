@@ -37,7 +37,7 @@ async function findWeather() {
 	let lat = loc.lat;
 	let lng = loc.lng;
 	let pro = fetch(`/findWeather?lat=${lat}&lng=${lng}&units=${unit}`,{'method':'get'});
-	weatherPromise = pro.then(val=>val.json()).then(val=>{console.log('got response : ',val);return val;}).then(val=>{
+	let weatherPromise = pro.then(val=>val.json()).then(val=>{console.log('got response : ',val);return val;}).then(val=>{
 		cWeather = val.summary;
 		cTemperature = val.temperature;
 		
