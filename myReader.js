@@ -29,10 +29,10 @@ function getAllKeys() {
 function getKey(keyName) {
 	// if(!filePromise) filePromise = readKeyFile(filename);
 	if(!filePromise) return;
-	console.log('get key');
+	// console.log('get key');
 	let pro2 = filePromise.then(val=>{
-		console.log('val : ',val);
-		console.log('keyName : ',keyName);
+		// console.log('val : ',val);
+		// console.log('keyName : ',keyName);
 		let keyIndex = val.indexOf(keyName+'=');
 		if(keyIndex<0) throw new Error('key not found');
 		val = val.substring(keyIndex);

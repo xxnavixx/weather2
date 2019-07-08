@@ -1,7 +1,7 @@
 console.log('go');
 const nfetch = require('node-fetch');
 let mr = require('./myReader.js');
-// let darkskykey;
+let darkskykey;
 // darkskykeyPromise = mr[0]('key.env').then(val=>{
 	// mr[2]('darkskykey').then(val=>{
 		// console.log('d key ',val);
@@ -18,7 +18,7 @@ const server = ex();
 const publicMiddle = ex.static('./public');
 const jsonMiddle = ex.json({'limit':'1mb'});
 const dbConstructor = require('nedb');
-db = new dbConstructor('weather.db');
+const db = new dbConstructor('weather.db');
 db.loadDatabase();
 
 server.use(jsonMiddle);
@@ -125,7 +125,8 @@ async function goo() {
 	let data = await mr[0]('key.env')
 	darkskykey = await mr[2]('darkskykey');
 	let port = process.env.PORT
-	if(!port) port = 3000;
+	console.log(process.env);
+	if(!port) {console.log('could not find evn port');port = 3000;}
 	server.listen(port,()=>{
 		console.log('===================');
 		console.log('server listening port : ',port);
