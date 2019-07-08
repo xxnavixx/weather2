@@ -128,7 +128,7 @@ async function goo() {
 		darkskykey = await mr[2]('darkskykey');
 	}
 	let port = process.env.PORT
-	console.log(process.env);
+	// console.log(process.env);
 	if(!port) {console.log('could not find evn port');port = 3000;}
 	server.listen(port,()=>{
 		console.log('===================');
